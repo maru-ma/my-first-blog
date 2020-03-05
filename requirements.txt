@@ -1,1 +1,1 @@
-Django~=3.o.3
+Django~=3.0.3

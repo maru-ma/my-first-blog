@@ -12,7 +12,7 @@ class Post(models.Model):
 
     # Metodos.
     def publish(self):
-        self.publish_date = timezone.now
+        self.publish_date = timezone.now()
         self.save()
 
     # Convertimos en string lo que queremos mostrar.

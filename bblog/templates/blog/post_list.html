@@ -1,35 +1,18 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Maru's blog</title>
-  </head>
-  <body>
-      <div class="">
+{% extends 'blog/base.html' %}
+{% block content %}
+<div class="">
 
-        <h1>Bienvenidx a mi blog</h1>
+    <h2>Mis Posts</h2>
 
-      </div>
-      <div class="">
+      {% for post in posts %}
+      <div class="post">
 
-        <h2>Mis Posts</h2>
-
-        {% for post in posts %}
-
-          <div class="">
-
-              <p>publicado: {{ post.publish_date }}</p>
-              <h2><a href="">{{ post.title }}</a></h2>
-              <p>{{ post.text|linebreaksbr }}</p>
-
-          </div>
-        {% endfor %}
+      <p>publicado: {{ post.publish_date }}</p>
+      <h2><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h2>
+      <p>{{ post.text|linebreaksbr }}</p>
 
       </div>
-      <div class="">
+      {% endfor %}
 
-        <p>Pagina creada siguiendo el tutorial <a href="https://djangogirls.org">Django Girls</a> </p>
-
-      </div>
-  </body>
-</html>
+</div>
+{% endblock %}

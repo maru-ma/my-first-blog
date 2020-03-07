@@ -1,0 +1,30 @@
+body{
+  background-color: #ff9191;
+}
+
+h1{
+  color: #59b7a3;
+  font-family: 'Lobster';
+  padding-left: 15px;
+}
+h1 a, h2 a{
+  color: #5976c6;
+  padding-left: 15px;
+}
+
+.page-header {
+    background-color: #C25100;
+    margin-top: 0;
+    padding: 20px 20px 20px 40px;
+}
+
+.page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active {
+    color: #ffffff;
+    font-size: 36pt;
+    text-decoration: none;
+}
+
+.post{
+  margin-bottom: 70px;
+  padding-left: 15px;
+}
